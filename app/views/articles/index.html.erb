@@ -1,0 +1,16 @@
+<h1>All blog posts of senthil</h1>
+#<%= link_to 'Want to write a New article ? ', new_article_path %>
+<%= link_to 'New article', new_article_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+    </tr>
+  <% end %>
+</table>
